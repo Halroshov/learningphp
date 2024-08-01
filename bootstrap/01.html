@@ -3,28 +3,46 @@
 <head>
     <meta charset="UTF-9">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap 5 栅格系统演示</title>
+    <title>Bootstrap 5 简单导航栏演示</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .row > div {
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-            background-color: rgba(86, 61, 124, .15);
-            border: 1px solid rgba(86, 61, 124, .2);
-        }
-    </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <h1 class="mb-4">Bootstrap 5 栅格系统演示</h1>
-        
-        <h2 class="mt-4">基本的12列布局</h2>
-        <div class="row">
-            <div class="col">列</div>
-            <div class="col">列</div>
-            <div class="col">列</div>
-            <div class="col">列</div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">导航栏</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">关于我们</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">联系我们</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            服务
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">安全证书认证</a></li>
+                            <li><a class="dropdown-item" href="#">端点检测与响应</a></li>
+                            <li><a class="dropdown-item" href="#">入侵检测系统</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>欢迎</h1>
+        <p>简单的导航栏演示。</p>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 </body>
