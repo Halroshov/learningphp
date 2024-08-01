@@ -1,49 +1,89 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-9">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap 5 简单导航栏演示</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <title>简单购物页面演示</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 </head>
 <body>
+    <!-- 导航栏 -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">导航栏</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="container">
+            <a class="navbar-brand" href="#">我的商店</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">首页</a>
+                        <a class="nav-link active" href="#">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">分类</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">关于我们</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">联系我们</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            服务
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">安全证书认证</a></li>
-                            <li><a class="dropdown-item" href="#">端点检测与响应</a></li>
-                            <li><a class="dropdown-item" href="#">入侵检测系统</a></li>
-                        </ul>
-                    </li>
                 </ul>
+                <a href="#" class="btn btn-outline-dark">
+                    <i class="bi bi-cart"></i> 购物车 <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                </a>
             </div>
         </div>
     </nav>
 
-    <div class="container mt-4">
-        <h1>欢迎</h1>
-        <p>简单的导航栏演示。</p>
+    <!-- 页面内容 -->
+    <div class="container mt-5">
+        <h1 class="mb-4">热门商品</h1>
+        <div class="row">
+            <!-- 产品1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://th.bing.com/th/id/R.7b35ed56a9780b26ace9feca254fabce?rik=0ct%2bBX3zwSkpAw&riu=http%3a%2f%2fwww.hnhuitian.com%2fstatics%2fattachment%2fgoods%2f2019%2f3%2f14%2f17%2f37292790_big.jpg&ehk=ZDEe5G6iOo5mMPKIFUReglgs%2f%2f%2b4se8ikPVNlgbpkJU%3d&risl=&pid=ImgRaw&r=0" class="card-img-top" alt="产品1">
+                    <div class="card-body">
+                        <h5 class="card-title">入侵检测系统</h5>
+                        <p class="card-text">入侵检测系统是一种网络安全工具，用于监控网络流量和设备，以发现已知的恶意活动、可疑活动或违反安全策略的行为。</p>
+                        <p class="card-text"><strong>¥888</strong></p>
+                        <a href="#" class="btn btn-primary">添加到购物车</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 产品2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://th.bing.com/th/id/OIP.eijkPEVknhuYS8I6joPyhQHaHa?rs=1&pid=ImgDetMain" class="card-img-top" alt="产品2">
+                    <div class="card-body">
+                        <h5 class="card-title">路由器</h5>
+                        <p class="card-text">路由器（英语：Router，又称路径器）是将运算设备（例如电脑）及网络连线至其他网络的联网设备。</p>
+                        <p class="card-text"><strong>¥888</strong></p>
+                        <a href="#" class="btn btn-primary">添加到购物车</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 产品3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://images.fravega.com/f1000/fd06426bcdc6618b90f81c81abcff5bc.jpg" class="card-img-top" alt="产品3">
+                    <div class="card-body">
+                        <h5 class="card-title">显卡</h5>
+                        <p class="card-text">显示卡（英语：Display Card）简称显卡，也称图形卡（Graphics Card），是个人电脑上以图形处理器（GPU）为核心的扩展卡，用途是提供中央处理器以外的微处理器帮助计算图像信息，并将计算机系统所需要的显示信息进行转换并提供逐行或隔行扫描信号给显示设备，是连接显示器和个人电脑主板的重要组件，是“人机对话”的重要设备之一</p>
+                        <p class="card-text"><strong>¥8888</strong></p>
+                        <a href="#" class="btn btn-primary">添加到购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            <p>&copy; 2024 我的商店. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
